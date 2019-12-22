@@ -8,7 +8,8 @@
           sh "${gradleHome}/bin/gradle build"
         }
 
-          stage ('post') {
+         stage ('post') {
+               def gradleHome= tool 'gradle4'
                sh "${gradleHome}/bin/gradle test"    
           }
      }
