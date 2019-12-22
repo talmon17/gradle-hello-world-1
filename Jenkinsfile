@@ -15,7 +15,7 @@
               if(CurrentBuild.results == 'SUCCESS') {
                 addBadge(icon: success.gif, text: 'Success')
               }
-              if(CurrentBuild.results == 'FAILURE) {
+              if(CurrentBuild.results == 'FAILURE') {
                 addBadge(icon: error.gif, text: 'Failure'
               }
           }
