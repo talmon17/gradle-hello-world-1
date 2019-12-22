@@ -12,10 +12,10 @@
             echo 'Error occurred'
           }
          stage ('post') {
-              if(CurrentBuild.results == 'SUCCESS') {
+              if(${currentBuild.result} == 'SUCCESS') {
                 addBadge(icon: success.gif, text: 'Success')
               }
-              if(CurrentBuild.results == 'FAILURE') {
+              if(${currentBuild.result} == 'FAILURE') {
                 addBadge(icon: error.gif, text: 'Failure')
               }
           }
