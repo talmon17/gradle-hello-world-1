@@ -11,10 +11,11 @@
                      sh "${gradleHome}/bin/gradle build"
                     }
           } catch (ex) {
-            currentBuild.result == 'Failure'
+            currentBuild.result == 'FAILURE'
             echo 'Error occurred'
           }
          stage ('post') {
+              echo currentBuild.result
               if(currentBuild.result == 'SUCCESS') {
                 addBadge(icon: success.gif, text: 'Success')
               }
