@@ -15,12 +15,12 @@
             echo 'Error occurred'
           }
          stage ('post') {
-              echo currentBuild.result
-              if(currentBuild.result == 'SUCCESS') {
-                addBadge(icon: success.gif, text: "Success")
-              }
-              if(currentBuild.result == 'FAILURE') {
-                addBadge(icon: error.gif, text: "Failure")
-              }
+            echo "Build result is " + currentBuild.result
+             if ( currentBuild.result == 'SUCCESS') {
+               addBadge(icon: 'green.gif', text: 'Build Succeeded')
+               }
+               if (currentBuild.result == 'FAILURE') {
+                    addBadge(icon: 'red.gif', text: 'Build Failed')
+               } 
           }
      }
