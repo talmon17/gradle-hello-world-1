@@ -17,10 +17,10 @@
          stage ('post') {
               echo currentBuild.result
               if(currentBuild.result == 'SUCCESS') {
-                addBadge(icon: success.gif, text: 'Success')
+                addBadge(icon: success.gif, text: "Success")
               }
               if(currentBuild.result == 'FAILURE') {
-                addBadge(icon: error.gif, text: 'Failure')
+                addBadge(icon: error.gif, text: "Failure")
               }
           }
      }
