@@ -8,4 +8,7 @@
           sh "${gradleHome}/bin/gradle build"
         }
 
+          stage ('post') {
+               sh "${gradleHome}/bin/gradle test"    
+          }
      }
